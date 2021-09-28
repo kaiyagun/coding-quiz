@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a class="nav__link" href = "#">View High Scores</a>
+        <p class= "nav__timer">Time: <span id="nav__countdown">0</span></p>
+    </nav>
+
+    <div class="card">
+        <h1 class="card__header">Coding Quiz Challenge</h1>
+        <p class="card__text">Try to answer the following questions within the time limit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maiores dicta asperiores officia voluptatibus soluta rerum repellendus, quo ducimus in amet culpa expedita perspiciatis tempore velit commodi vitae dolorum suscipit.</p>
+        <button class="card__start">Start</button>
+    </div>
+
+    <div class="question-card-1" id="question__card-1">
+        <form action="#">
+            <p>Please select your favorite Web language:</p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>     
+          <br>     
+        <button class="question__button">Next Question</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
