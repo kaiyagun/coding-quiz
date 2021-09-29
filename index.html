@@ -11,49 +11,59 @@
     <nav class="nav">
         <a class="nav__link" href = "#">View High Scores</a>
         <p class= "nav__timer">Time: <span id="nav__countdown">0</span></p>
+        <p class= "scoreboard">Score: <span id="score">0</span></p>
     </nav>
 
-    <div class="card">
-        <h1 class="card__header">Coding Quiz Challenge</h1>
-        <p class="card__text">Try to answer the following questions within the time limit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maiores dicta asperiores officia voluptatibus soluta rerum repellendus, quo ducimus in amet culpa expedita perspiciatis tempore velit commodi vitae dolorum suscipit.</p>
-        <button class="card__start">Start</button>
+    <header class="title-page">
+        <h1 class="title_header">How Many Capitals Do You Know?</h1>
+        <p class="title_text">Test your knowledge with this timed quiz!</p>
+        <button class="start-button">Start!</button>
+    </header>
+    
+    <div class="first">
+        <h1>What is the capital of Sweden</h1>
+        <ul>
+            <button class="answer-button-one" name="one" value="wrong">Copenhagen</button>
+            <button class="answer-button-one" value="wrong">Sydney</button>
+            <button class="answer-button-one" value="wrong">Prague</button>
+            <button class="answer-button-one" value="correct">Stockholm</button>
+        </ul>
+        <p id=first-message></p>
     </div>
 
-
-    <div class="questions" id="questions">
-        <button class="question__button">Next Question</button>
+    <div class="second">
+        <h1>What is the capital of Germany</h1>
+        <ul>
+            <button id="answer-button-two" value="wrong">Paris</button>
+            <button id="answer-button-two" value="wrong">Athens</button>
+            <button id="answer-button-two" value="correct">Berlin</button>
+            <button id="answer-button-two" value="wrong">Budapest</button>
+        </ul>
+        <p id=second-message></p>
     </div>
-        <!-- <form>
-            <select id="second-question" name="second-question">
-            <option value="au">Australia</option>
-            <option value="ca">Canada</option>
-            <option value="usa">USA</option>
-            </select>
-            <br>
-            <button id="question__button" class="question__button">Next Question</button>
-          </form>
-        <form>
-            <select id="third-question" name="third-question">
-            <option value="au">Australia</option>
-            <option value="ca">Canada</option>
-            <option value="usa">USA</option>
-            </select>
-            <br>
-            <button id="question__button" class="question__button">Next Question</button>
-          </form>
-        <form>
-            <select id="fourth-question" name="fourth-question">
-            <option value="au">Australia</option>
-            <option value="ca">Canada</option>
-            <option value="usa">USA</option>
-            </select>
-            <br>
-            <button id="question__button" class="question__button">Next Question</button>
-          </form> -->
-        
 
+    <div class="third">
+        <h1>What is the capital of Canada</h1>
+        <ul>
+            <button id="answer-button-three" value="wrong">Lisbon</button>
+            <button id="answer-button-three" value="correct">Ottawa</button>
+            <button id="answer-button-three" value="wrong">Oslo</button>
+            <button id="answer-button-three" value="wrong">Manila</button>
+        </ul>
+        <p id=third-message></p>
+    </div>
 
-   
+    <div class="fourth">
+        <h1>What is the capital of Ukraine</h1>
+        <ul>
+            <button id="answer-button-four" value="correct">Kiev</button>
+            <button id="answer-button-four" value="wrong">Tashkent</button>
+            <button id="answer-button-four" value="wrong">Damascus</button>
+            <button id="answer-button-four" value="wrong">Moscow</button>
+        </ul>
+        <p id=fourth-message></p>
+    </div>
+
 
     <script src="./script.js"></script>
 </body>
