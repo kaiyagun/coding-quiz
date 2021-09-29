@@ -1,5 +1,4 @@
-// document.body.addEventListener("click", function() {
-//     console.log("hello world")
+
 
 // })
 /* TODO: add timer that stops quiz at 0
@@ -14,46 +13,34 @@ TODO: add reset button maybe*/
 //timer starts
 //select an answer
 //click next question button
+
+//title card vars
 var titleContainer = document.querySelector(".card");
-
-var questionContainer = document.querySelector(".question-card");
-
 var startButton = document.body.querySelector(".card__start");
 
-var timer = document.body.querySelector(".nav__timer");
+//question 1 vars
+// var firstQuestion = document.querySelector("questions");
+var questionCard = document.querySelector(".questions");
+var nextQuestion = document.querySelector(".question__button");
 
+var timer = document.body.querySelector(".nav__timer");
 var secondsLeft = 120;
 
-var questionCard = document.getElementById("question__card-1");
 
-var nextQuestion = document.querySelector(".question__button");
+//other questions will be used later lol
+// var secondQuestion = document.querySelector("#second-question");
+// var thirdQuestion = document.querySelector("#third-question");
+// var fourthQuestion = document.querySelector("#fourth-question");
+
+var answers = [];
+
 
 timer.textContent = "Time: " + secondsLeft;
 
 // console.log(startButton);
 startButton.addEventListener("click", startQuiz)
 
-document.getElementById("question__card-1").style.display = "none";
-
-var questions = [
-  {
-    question: "what's the capital of sweden?",
-    choices: ["texas", "blank", "random", "italy"],
-    answer: "blank",
-  },
-  {
-    question: "what's the capital of germany?",
-    choices: ["texas", "blank", "random", "italy"],
-    answer: "blank",
-  },
-  {
-    question: "what's the capital of denmark?",
-    choices: ["texas", "blank", "random", "italy"],
-    answer: "blank",
-  },
-];
-
-//create quiz container
+document.getElementById("questions").style.display = "none";
 
 function startQuiz() {
 
@@ -75,11 +62,53 @@ function showQuestion(){
 
     console.log("whats up");
     
-    questionCard.style.display = "block";
+    document.getElementById("questions").style.display = "block";
+
+    var selectList = document.createElement("select");
+    selectList.id = "questionOne";
+    questionCard.appendChild(selectList);
+
+    for (var i = 0; i < questions.length; i++) {
+        var option = document.createElement("option");
+        option.value = questions[0] ['choices'][i];
+        option.text = questions[0]['choices'][i];
+        selectList.appendChild(option);
+    }
+    
+    
 }
+
+// nextQuestion.addEventListener("click", answerQuestion())
+
+// function answerQuestion() {
+    // var correct = document.getElementById("question-one-correct")
+    
+    
+
+var questions = [
+  {
+    question: "what's the capital of sweden?",
+    choices: ["texas", "blank", "random", "italy"],
+    answer: "blank",
+  },
+  {
+    question: "what's the capital of germany?",
+    choices: ["texas", "blank", "random", "italy"],
+    answer: "blank",
+  },
+  {
+    question: "what's the capital of denmark?",
+    choices: ["texas", "blank", "random", "italy"],
+    answer: "blank",
+  },
+];
 
 
 nextQuestion.addEventListener("click", function(event) {
     event.preventDefault();
-    console.log("booyeah");
-})
+
+    console.log(questions[0]['answer']);
+
+});
+
+
